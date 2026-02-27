@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router";
 
 function ExploreSection() {
   const [formData, setFormData] = useState({
@@ -52,10 +53,10 @@ function ExploreSection() {
         </p>
 
         <div className="explore-cards">
-          <a href="/gallery" className="card">Gallery</a>
-          <a href="/about" className="card">About</a>
-          <a href="/blog" className="card">Journal</a>
-          <a href="/book" className="card">Book a Visit</a>
+          <Link to="/gallery" className="card">Gallery</Link>
+          <Link to="/about" className="card">About</Link>
+          <Link to="/blog" className="card">Journal</Link>
+          <Link to="/book" className="card">Book a Visit</Link>
         </div>
       </div>
 
