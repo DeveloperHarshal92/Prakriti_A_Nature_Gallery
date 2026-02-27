@@ -1,0 +1,61 @@
+@use "../base/variables" as v;
+
+.notfound {
+  width: 100%;
+  min-height: 100vh;
+  background: #0b100d;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0 2rem;
+
+  .eyebrow {
+    font-size: 0.7rem;
+    letter-spacing: 0.35em;
+    color: rgba(234, 244, 234, 0.4);
+    margin-bottom: 1.5rem;
+  }
+
+  h1 {
+    font-family: v.$font-display;
+    font-size: 3.2rem;
+    line-height: 1.15;
+    color: rgba(234, 244, 234, 0.95);
+    margin-bottom: 1.6rem;
+  }
+
+  p {
+    max-width: 520px;
+    font-size: 0.95rem;
+    line-height: 1.7;
+    color: rgba(234, 244, 234, 0.65);
+    margin-bottom: 3rem;
+  }
+
+  .cta {
+    align-self: center;
+    padding: 14px 34px;
+    border-radius: 999px;
+    text-decoration: none;
+    font-size: 0.75rem;
+    letter-spacing: 0.25em;
+
+    color: rgba(234, 244, 234, 0.9);
+    border: 1px solid rgba(127, 191, 155, 0.45);
+    background: transparent;
+    transition: all 0.35s ease;
+
+    &:hover {
+      background: rgba(127, 191, 155, 0.15);
+      transform: translateY(-1px);
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .notfound h1 {
+    font-size: 2.4rem;
+  }
+}
