@@ -1,0 +1,95 @@
+@use "../base/variables" as v;
+@use "../base/mixins" as m;
+
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+
+  padding: 1.2rem 8%;
+  background: rgba(14, 20, 17, 0.7);
+  backdrop-filter: blur(10px);
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &__brand {
+    .logo {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+
+    font-family: v.$font-display;
+    font-size: 1.6rem;
+    color: v.$text-main;
+
+  i {
+    color: v.$accent;
+    font-size: 1.4rem;
+  }
+}
+  }
+
+  &__links {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+
+    li {
+      a {
+        text-decoration: none;
+        font-size: 0.9rem;
+        color: v.$text-muted;
+        transition: color 0.3s ease;
+
+        &:hover {
+          color: v.$text-main;
+        }
+
+        &.active {
+          color: v.$accent;
+        }
+      }
+
+      .cta {
+        padding: 10px 22px;
+        border-radius: 999px;
+        border: 1px solid rgba(127, 191, 155, 0.5);
+        color: v.$text-main;
+        background: rgba(127, 191, 155, 0.12);
+
+        &:hover {
+          background: rgba(127, 191, 155, 0.22);
+        }
+
+        &.active {
+          border-color: rgba(127, 191, 155, 0.9);
+        }
+      }
+    }
+  }
+}
+
+.navbar {
+  .nav-container {
+    .nav_links {
+      display: flex;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    padding: 1.2rem 1.5rem;
+  }
+
+  .navbar .nav-container {
+    justify-content: flex-start;
+  }
+
+  .navbar__links {
+    display: none;
+  }
+}

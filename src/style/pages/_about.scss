@@ -1,0 +1,182 @@
+@use "../base/variables" as v;
+
+.about-philosophy,
+.about-curators,
+.about-values,
+.about-quote {
+  width: 100%;
+  padding: 6rem 8%;
+}
+
+.about-philosophy {
+  min-height: 90vh;
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  align-items: center;
+  gap: 4rem;
+  background: linear-gradient(
+    90deg,
+    #0e1411 0%,
+    #0e1411 55%,
+    transparent 100%
+  );
+
+  .text {
+    max-width: 520px;
+
+    .eyebrow {
+      font-size: 0.75rem;
+      letter-spacing: 0.2em;
+      color: rgba(234, 244, 234, 0.5);
+      margin-bottom: 1.2rem;
+      display: block;
+    }
+
+    h1 {
+      font-family: v.$font-display;
+      font-size: 3.8rem;
+      line-height: 1.1;
+      color: #eaf4ea;
+      margin-bottom: 2rem;
+    }
+
+    p {
+      font-size: 1rem;
+      line-height: 1.7;
+      color: rgba(234, 244, 234, 0.75);
+    }
+  }
+
+  .visual {
+    width: 100%;
+    height: 420px;
+    background: v.$bg-soft;
+    border-radius: 18px;
+    overflow: hidden;
+  }
+}
+
+.about-curators {
+  background: v.$bg-deep;
+
+  h2 {
+    font-family: v.$font-display;
+    font-size: 2.4rem;
+    color: v.$text-main;
+    margin-bottom: 3rem;
+  }
+
+  .curator-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3rem;
+  }
+
+  .curator-card {
+    text-align: left;
+
+    img {
+      width: 100%;
+      height: 260px;
+      object-fit: cover;
+      object-position: center;
+      border-radius: 14px;
+      filter: grayscale(100%);
+      margin-bottom: 1.2rem;
+    }
+
+    h3 {
+      font-size: 1.1rem;
+      color: v.$text-main;
+      margin-bottom: 0.5rem;
+    }
+
+    p {
+      font-size: 0.9rem;
+      color: v.$text-muted;
+      line-height: 1.6;
+    }
+  }
+}
+
+.about-values {
+  background: #0e1411; 
+  color: #eaf4ea;
+  h2 {
+    font-family: v.$font-display;
+    font-size: 2.2rem;
+    color: #eaf4ea;
+    opacity: 0.95;
+    margin-bottom: 3rem;
+  }
+
+  .values-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3rem 4rem;
+  }
+
+  .value-item {
+    h3 {
+      font-size: 1rem;
+      color: #eaf4ea;
+      opacity: 0.9;
+      margin-bottom: 0.6rem;
+      letter-spacing: 0.05em;
+    }
+
+    p {
+      font-size: 0.9rem;
+      line-height: 1.6;
+      color: rgba(234, 244, 234, 0.65);
+      max-width: 360px;
+    }
+  }
+}
+
+.about-quote {
+  padding: 8rem 8%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background: #0b100d;
+
+  p {
+    font-family: v.$font-display;
+    font-size: 2.4rem;
+    line-height: 1.4;
+    max-width: 700px;
+    color: rgba(234, 244, 234, 0.85);
+    opacity: 0.9;
+  }
+}
+
+@media (max-width: 1024px) {
+  .about-philosophy {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+
+    .visual {
+      height: 360px;
+    }
+  }
+
+  .about-curators .curator-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .about-values .values-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .about-curators .curator-list {
+    grid-template-columns: 1fr;
+  }
+
+  .about-quote p {
+    font-size: 1.8rem;
+  }
+}

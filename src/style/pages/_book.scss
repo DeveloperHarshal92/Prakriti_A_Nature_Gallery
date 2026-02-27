@@ -1,0 +1,140 @@
+@use "../base/variables" as v;
+
+.book-page {
+  width: 100%;
+  min-height: 100vh;
+  background: #0b100d;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.book-hero,
+.book-form,
+.book-info {
+  width: 100%;
+  max-width: 680px;
+  padding: 5rem 2rem;
+}
+
+.book-hero {
+  padding-top: 7rem;
+
+  .eyebrow {
+    display: block;
+    font-size: 0.7rem;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: rgba(234, 244, 234, 0.45);
+    margin-bottom: 1.6rem;
+  }
+
+  h1 {
+    font-family: v.$font-display;
+    font-size: 3.2rem;
+    line-height: 1.15;
+    color: rgba(234, 244, 234, 0.95);
+    margin-bottom: 1.8rem;
+  }
+
+  p {
+    max-width: 520px;
+    font-size: 0.95rem;
+    line-height: 1.7;
+    color: rgba(234, 244, 234, 0.65);
+  }
+}
+
+.book-form {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 2.4rem;
+  }
+
+  .field {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+
+    label {
+      font-size: 0.7rem;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: rgba(234, 244, 234, 0.5);
+    }
+
+    input,
+    textarea {
+      background: rgba(255, 255, 255, 0.025);
+      border: 1px solid rgba(234, 244, 234, 0.12);
+      border-radius: 14px;
+      padding: 14px 18px;
+      font-size: 0.9rem;
+      color: rgba(234, 244, 234, 0.9);
+      transition: border-color 0.3s ease, background 0.3s ease;
+
+      &::placeholder {
+        color: rgba(234, 244, 234, 0.35);
+      }
+
+      &:focus {
+        outline: none;
+        border-color: rgba(127, 191, 155, 0.45);
+        background: rgba(255, 255, 255, 0.04);
+      }
+    }
+
+    textarea {
+      min-height: 120px;
+      resize: none;
+    }
+  }
+
+  button {
+    margin-top: 1.5rem;
+    align-self: flex-start;
+    padding: 13px 34px;
+    border-radius: 999px;
+    border: 1px solid rgba(127, 191, 155, 0.45);
+    background: transparent;
+    color: rgba(234, 244, 234, 0.9);
+    font-size: 0.7rem;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.35s ease;
+
+    &:hover {
+      background: rgba(127, 191, 155, 0.15);
+      border-color: rgba(127, 191, 155, 0.65);
+      transform: translateY(-1px);
+    }
+  }
+}
+
+.book-info {
+  padding-top: 2rem;
+  padding-bottom: 6rem;
+
+  p {
+    max-width: 520px;
+    font-size: 0.8rem;
+    line-height: 1.7;
+    color: rgba(234, 244, 234, 0.5);
+  }
+}
+
+.book-form,
+.book-info {
+  border-top: 1px solid rgba(234, 244, 234, 0.05);
+}
+
+@media (max-width: 600px) {
+  .book-hero h1 {
+    font-size: 2.4rem;
+  }
+}
