@@ -14,10 +14,9 @@ function HeroSection() {
         </p>
 
         <button onClick={()=>navigate("/gallery")} className="cta">
-          <span>Explore Gallery</span>
+          Explore gallery
           <i className="ri-arrow-right-line"></i>
         </button>
-
       </div>
 
       <div className="hero-right">
