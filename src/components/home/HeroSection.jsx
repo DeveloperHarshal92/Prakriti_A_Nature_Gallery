@@ -1,7 +1,9 @@
-import {Link } from "react-router";
+import {Link, NavLink, useNavigate } from "react-router";
 import heroVideo from "../../assets/videos/Nature_film_abstract_art_gallery_delpmaspu_.mp4";
 
 function HeroSection() {
+
+  const navigate = useNavigate();
   return (
     <section id="section1">
       <div className="hero-left">
@@ -11,10 +13,11 @@ function HeroSection() {
           to create calm, immersive experiences.
         </p>
 
-        <Link to="/gallery" className="cta">
+        <Link onClick={()=>navigate("/gallery")} to="/gallery" className="cta">
           <span>Explore Gallery</span>
           <i className="ri-arrow-right-line"></i>
         </Link>
+
       </div>
 
       <div className="hero-right">
