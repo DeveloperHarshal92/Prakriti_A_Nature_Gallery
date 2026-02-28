@@ -1,4 +1,4 @@
-import { NavLink } from "react-router";
+import {Link } from "react-router";
 import heroVideo from "../../assets/videos/Nature_film_abstract_art_gallery_delpmaspu_.mp4";
 
 function HeroSection() {
@@ -11,10 +11,10 @@ function HeroSection() {
           to create calm, immersive experiences.
         </p>
 
-        <NavLink to="/gallery" className="cta">
+        <Link to="/gallery" className="cta">
           <span>Explore Gallery</span>
           <i className="ri-arrow-right-line"></i>
-        </NavLink>
+        </Link>
       </div>
 
       <div className="hero-right">
