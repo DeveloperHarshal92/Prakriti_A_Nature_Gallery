@@ -13,10 +13,10 @@ function HeroSection() {
           to create calm, immersive experiences.
         </p>
 
-        <Link onClick={()=>navigate("/gallery")} to="/gallery" className="cta">
+        <button onClick={()=>navigate("/gallery")} className="cta">
           <span>Explore Gallery</span>
           <i className="ri-arrow-right-line"></i>
-        </Link>
+        </button>
 
       </div>
 
